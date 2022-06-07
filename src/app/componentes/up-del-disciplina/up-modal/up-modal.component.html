@@ -1,0 +1,32 @@
+<br><br>
+<div class="container" *ngIf="show">
+    <form [formGroup]="dadosDisciplinas">
+        <div class="row">
+            <mat-form-field class="example-full-width" color="primary" appearance="fill">
+                <input matInput placeholder="Nome da Disciplina" type="tel" formControlName="nome">
+            </mat-form-field>
+        </div><br><br>
+
+        <div class="row">
+            <mat-form-field class="example-full-width" color="primary"  appearance="fill">
+                <input matInput placeholder="Código" type="text" formControlName="codigo">
+            </mat-form-field>
+        </div><br><br>
+
+        <div class="row">
+            <mat-form-field class="example-full-width" color="primary"  appearance="fill">
+                <input matInput placeholder="Créditos" type="text" formControlName="creditos">
+            </mat-form-field>
+        </div><br><br>
+    </form>
+
+    <button mat-flat-button color="primary" (click)="saveDisciplina()">Salvar Disciplina</button>
+    <button mat-flat-button color="secondary" (click)="dismiss()">Cancelar</button>
+</div>
+
+<div *ngIf="!show">
+    <h2>Deseja excluir essa disciplina?</h2>
+
+    <button mat-flat-button color="primary" (click)="deleteDisciplina()">Excluir Disciplina</button>
+    <button mat-flat-button color="secondary" (click)="dismiss()">Cancelar</button>
+</div>
