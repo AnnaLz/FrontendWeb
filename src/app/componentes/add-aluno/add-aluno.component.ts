@@ -53,7 +53,7 @@ export class AddAlunoComponent implements OnInit {
 
     this.alunoService.create(data)
       .subscribe(response => {
-          // console.log(response)
+          this.newAluno();
       });
   }
 

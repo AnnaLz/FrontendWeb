@@ -29,4 +29,12 @@ export class ToolbarComponent implements OnInit {
     this.router.navigate(['/list-disciplina']);
   }
 
+  findAluno(){
+    this.router.navigate(['/find-aluno']);
+  }
+
+  findDisciplina(){
+    this.router.navigate(['/find-disciplina']);
+  }
+
 }

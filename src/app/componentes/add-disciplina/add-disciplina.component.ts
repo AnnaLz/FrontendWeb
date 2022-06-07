@@ -48,7 +48,7 @@ export class AddDisciplinaComponent implements OnInit {
 
     this.disciplinaServive.create(data)
       .subscribe(response => {
-          // console.log(response)
+          this.newDisciplina();
       });
   }
 

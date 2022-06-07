@@ -1,1 +1,43 @@
-<p>find-disciplina works!</p>
+<br><br>
+<div class="container">
+      <form [formGroup]="dadosDisciplina">
+        <mat-form-field appearance="fill">
+          <mat-label>Consultar Disciplina</mat-label>
+          <input type="text"
+                 matInput
+                 formControlName="codigo"
+                 placeholder="Código da disciplina"
+                 required>
+        </mat-form-field>
+      </form><br>
+
+      <button mat-flat-button color="primary" (click)="pesquisar()">Pesquisar Disciplina</button>
+
+</div><br><br>
+
+<div style="max-width: 80%; margin: auto; display: block;">
+  <form [formGroup]="dadosDisciplinaPesquisada" *ngIf="show">
+    <div class="row">
+        <mat-form-field class="example-full-width" color="primary" appearance="fill">
+          <mat-label>Código</mat-label>
+            <input [readonly]="true" matInput placeholder="Número de matrícula" type="tel" formControlName="codigo">
+        </mat-form-field>
+    </div><br>
+
+    <div class="row">
+        <mat-form-field class="example-full-width" color="primary"  appearance="fill">
+          <mat-label>Nome</mat-label>
+            <input [readonly]="true"  matInput type="text" formControlName="nome">
+        </mat-form-field>
+    </div><br>
+
+    <div class="row">
+      <mat-form-field class="example-full-width" color="primary" appearance="fill">
+        <mat-label>Créditos</mat-label>
+        <input [readonly]="true" matInput type="text" formControlName="creditos">
+      </mat-form-field>
+    </div><br>
+    </form>
+
+    <h1 *ngIf="showWarning">Disciplina não encontrada!</h1>
+</div>

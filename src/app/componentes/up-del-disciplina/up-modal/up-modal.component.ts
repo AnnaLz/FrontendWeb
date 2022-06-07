@@ -57,7 +57,6 @@ export class UpModalComponent implements OnInit {
 
     this.disciplinaService.update(this.data.id, data)
       .subscribe(response => {
-          // console.log(response)
           this.dialogRef.close();
           location.reload();
       });
@@ -67,7 +66,6 @@ export class UpModalComponent implements OnInit {
 
     this.disciplinaService.delete(this.data.id)
       .subscribe(response => {
-          // console.log(response)
           this.dialogRef.close();
           location.reload();
       });

@@ -26,7 +26,6 @@ export class UpModalAlunoComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadForm();
-    console.log(this.data)
     if(this.data.contexto === 'edit'){
       this.show = true;
 
@@ -68,7 +67,6 @@ export class UpModalAlunoComponent implements OnInit {
 
     this.alunoService.update(this.data.id, data)
       .subscribe(response => {
-          // console.log(response)
           this.dialogRef.close();
           location.reload();
       });
@@ -78,7 +76,6 @@ export class UpModalAlunoComponent implements OnInit {
 
     this.alunoService.delete(this.data.id)
       .subscribe(response => {
-          // console.log(response)
           this.dialogRef.close();
           location.reload();
       });

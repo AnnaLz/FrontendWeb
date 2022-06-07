@@ -36,7 +36,6 @@ export class UpDelAlunoComponent implements OnInit {
     this.alunoService.getAll()
       .subscribe((response) =>{
         this.dataSource = response;
-        console.log(this.dataSource)
       })
   }
 
@@ -48,10 +47,10 @@ export class UpDelAlunoComponent implements OnInit {
   }
 
   deleteAluno(id: any):void{
-    // const dialogRef = this.dialog.open(UpModalComponent, {
-    //   width: '300px',
-    //   height: '210px',
-    //   data: {contexto: "delete", id: id},
-    // });
+    const dialogRef = this.dialog.open(UpModalAlunoComponent, {
+      width: '300px',
+      height: '210px',
+      data: {contexto: "delete", id: id},
+    });
   }
 }
